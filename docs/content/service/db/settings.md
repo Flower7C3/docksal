@@ -19,7 +19,7 @@ When using the default stack (a custom project stack is not defined in `.docksal
 via the `DB_IMAGE` variable in `.docksal/docksal.env`, e.g.:
 
 ```bash
-DB_IMAGE='docksal/db:1.1-mysql-5.7'
+DB_IMAGE='docksal/mysql:5.6-1.4'
 ```
 This can also be set with `fin config set`.
 ```bash
@@ -33,12 +33,7 @@ Different MySQL versions may not be fully compatible. A complete `db` service re
 followed by a DB re-import.
 {{% /notice %}}
 
-Available images:
-
-- MySQL 5.5 - `docksal/db:1.1-mysql-5.5`
-- MySQL 5.6 - `docksal/db:1.1-mysql-5.6` (default)
-- MySQL 5.7 - `docksal/db:1.1-mysql-5.7`
-- MySQL 8.0 - `docksal/db:1.1-mysql-8.0`
+Check the [list of the available DB images](/stack/images-versions#mysql) or run `fin image registry docksal/db` for the full list of available images.
 
 There are also "edge" versions available that contain code from ongoing updates, but may not be stable. Don't switch to an
 edge image unless directed to do so by the Docksal team for testing purposes only.
